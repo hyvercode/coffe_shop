@@ -8,46 +8,24 @@ class CoffeeSuccess extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 backgroundColor: const Color(0xFFFFFFFF),
-body: Center(
-child: Column(
-mainAxisAlignment: Mainaxisalignment.center,
-crossAxisAlignment: Crossaxisalignment.center,
+body: Center(child: Column(mainAxisAlignment: MainAxisAlignment.center,
+crossAxisAlignment: CrossAxisAlignment.center,
 children: [
-Icon(
-Icon(Icons.check_circle),
-size: 100.0,
-color: const Color(0xFF10B981),
-),
-SizedBox(
-height: 24.0,
-),
-Text(
-'Order Successful!',
-fontSize: 28.0,
-fontWeight: 'bold',
-),
-SizedBox(
-height: 16.0,
-),
-Text(
-'Your order is being prepared.',
-color: const Color(0xFF6B7280),
-),
-SizedBox(
-height: 32.0,
-),
-ElevatedButton(
-backgroundColor: const Color(0xFF4A2C2A),
-borderRadius: BorderRadius.circular(12.0),
+Icon(Icons.check_circle,
+style: TextStyle(color: const Color(0xFF10B981)),
+size: 100.0),
+SizedBox(height: 24.0),
+Text('Order Successful!',
+style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold)),
+SizedBox(height: 16.0),
+Text('Your order is being prepared.',
+style: TextStyle(color: const Color(0xFF6B7280))),
+SizedBox(height: 32.0),
+ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
+text: 'Back to Menu',
 onPressed: () => Navigator.pushNamed(context, '/coffee-catalog-menu'),
-child: Text(
-'Back to Menu',
-),
-style: ElevatedButton.styleFrom(fixedSize: const Size(double.infinity, 52)),
-)
-],
-),
-),
+child: Text('Back to Menu'))
+])),
 );
   }
 }
