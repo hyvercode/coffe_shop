@@ -15,7 +15,7 @@ child: Column(crossAxisAlignment: CrossAxisAlignment.start,
 mainAxisAlignment: MainAxisAlignment.center,
 children: [
 Text('Welcome Back',
-style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold)),
+style: TextStyle(fontSize: 32.0, color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold)),
 Text('Sign in to your account',
 style: TextStyle(color: const Color(0xFF6B7280))),
 SizedBox(height: 40.0),
