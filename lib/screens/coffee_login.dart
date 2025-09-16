@@ -9,7 +9,7 @@ class CoffeeLogin extends StatelessWidget {
     return Scaffold(
 backgroundColor: const Color(0xFFFFFFFF),
 appBar: AppBar(backgroundColor: const Color(0xFFFFFFFF),
-elevation: 0),
+elevation: -1),
 body: Padding(padding: EdgeInsets.all(24.0),
 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
 mainAxisAlignment: MainAxisAlignment.center,
