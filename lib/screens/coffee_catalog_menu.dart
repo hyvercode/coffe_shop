@@ -22,7 +22,7 @@ style: TextStyle(fontSize: 32.0, color: const Color(0xFF4A2C2A), fontWeight: Fon
 SizedBox(height: 16.0),
 Wrap(spacing: 16.0,
 runSpacing: 16.0,
-direction: Axis.vertical,
+direction: Axis.horizontal,
 children: [
 Column(mainAxisAlignment: MainAxisAlignment.center,
 crossAxisAlignment: CrossAxisAlignment.center,

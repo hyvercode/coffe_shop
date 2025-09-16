@@ -462,7 +462,7 @@
                     "properties": {
                       "spacing": 16,
                       "runSpacing": 16,
-                      "direction": "vertical"
+                      "direction": "horizontal"
                     },
                     "children": [
                       {
