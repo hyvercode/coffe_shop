@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Coffe Shop',
       theme: appTheme,
-      initialRoute: '/coffee-catalog-menu',
+      initialRoute: '/coffee-splash-screen',
       routes: {
         '/coffee-splash-screen': (context) => const CoffeeSplashScreen(),
         '/coffee-login': (context) => const CoffeeLogin(),
