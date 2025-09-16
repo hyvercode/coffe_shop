@@ -43,7 +43,8 @@ child: Text('Login')),
 SizedBox(height: 16.0),
 Row(mainAxisAlignment: MainAxisAlignment.center,
 children: [
-Text('Don\'t have an account? '),
+Text('Don\'t have an account? ',
+style: TextStyle(color: const Color(0xFF050505))),
 GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-register'), child: Text('Sign Up',
 style: TextStyle(color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold),
 onTap: () => Navigator.pushNamed(context, '/coffee-register')))
