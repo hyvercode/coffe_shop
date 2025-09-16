@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+
+
+class CoffeeSuccess extends StatelessWidget {
+  const CoffeeSuccess({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+backgroundColor: const Color(0xFFFFFFFF),
+body: Center(
+child: Column(
+mainAxisAlignment: Mainaxisalignment.center,
+crossAxisAlignment: Crossaxisalignment.center,
+children: [
+Icon(
+Icon(Icons.check_circle),
+size: 100.0,
+color: const Color(0xFF10B981),
+),
+SizedBox(
+height: 24.0,
+),
+Text(
+'Order Successful!',
+fontSize: 28.0,
+fontWeight: 'bold',
+),
+SizedBox(
+height: 16.0,
+),
+Text(
+'Your order is being prepared.',
+color: const Color(0xFF6B7280),
+),
+SizedBox(
+height: 32.0,
+),
+ElevatedButton(
+backgroundColor: const Color(0xFF4A2C2A),
+borderRadius: BorderRadius.circular(12.0),
+onPressed: () => Navigator.pushNamed(context, '/coffee-catalog-menu'),
+child: Text(
+'Back to Menu',
+),
+style: ElevatedButton.styleFrom(fixedSize: const Size(double.infinity, 52)),
+)
+],
+),
+),
+);
+  }
+}
