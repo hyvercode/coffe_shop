@@ -249,9 +249,9 @@
             "id": "571b8296-56aa-422f-8f16-ca3e3384eae2",
             "type": "AppBar",
             "properties": {
-              "title": "Create Account",
+              "title": "",
               "backgroundColor": "#FFFFFF",
-              "elevation": 0
+              "elevation": -1
             },
             "children": []
           },
@@ -1729,7 +1729,7 @@
       }
     }
   ],
-  "activeScreenId": "0624c138-a98d-4d33-b749-15d2807d5115",
+  "activeScreenId": "5b18a709-3225-41e6-bc34-9be20c6bcd89",
   "theme": {
     "primaryColor": "#6200EE",
     "accentColor": "#03DAC6",

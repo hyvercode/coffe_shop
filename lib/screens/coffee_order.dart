@@ -13,8 +13,7 @@ backgroundColor: const Color(0xFFFFFFFF),
 elevation: 0),
 body: Column(children: [
 Expanded(child: SingleChildScrollView(child: Column(children: [
-Image('https://picsum.photos/400/300?random=11',
-src: 'https://picsum.photos/400/300?random=11',
+Image.network('https://picsum.photos/400/300?random=11',
 height: 250.0),
 Padding(padding: EdgeInsets.all(16.0),
 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +30,6 @@ style: TextStyle(color: const Color(0xFF6B7280)))
 ]))),
 Padding(padding: EdgeInsets.all(16.0),
 child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
-text: 'Add to Cart',
 onPressed: () => Navigator.pushNamed(context, '/coffee-cart'),
 child: Text('Add to Cart')))
 ]),

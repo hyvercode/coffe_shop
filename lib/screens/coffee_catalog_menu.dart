@@ -22,10 +22,8 @@ Wrap(spacing: 16.0,
 runSpacing: 16.0,
 children: [
 GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-onTap: () => Navigator.pushNamed(context, '/coffee-order'),
 child: Column(children: [
-Image('https://picsum.photos/300/200?random=10',
-src: 'https://picsum.photos/300/200?random=10',
+Image.network('https://picsum.photos/300/200?random=10',
 height: 120.0),
 Padding(padding: EdgeInsets.all(8.0),
 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,10 +34,8 @@ Text('\$2.50')
 ]))
 ]))),
 GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-onTap: () => Navigator.pushNamed(context, '/coffee-order'),
 child: Column(children: [
-Image('https://picsum.photos/300/200?random=11',
-src: 'https://picsum.photos/300/200?random=11',
+Image.network('https://picsum.photos/300/200?random=11',
 height: 120.0),
 Padding(padding: EdgeInsets.all(8.0),
 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,10 +46,8 @@ Text('\$3.50')
 ]))
 ]))),
 GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-onTap: () => Navigator.pushNamed(context, '/coffee-order'),
 child: Column(children: [
-Image('https://picsum.photos/300/200?random=12',
-src: 'https://picsum.photos/300/200?random=12',
+Image.network('https://picsum.photos/300/200?random=12',
 height: 120.0),
 Padding(padding: EdgeInsets.all(8.0),
 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,10 +58,8 @@ Text('\$4.00')
 ]))
 ]))),
 GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-onTap: () => Navigator.pushNamed(context, '/coffee-order'),
 child: Column(children: [
-Image('https://picsum.photos/300/200?random=13',
-src: 'https://picsum.photos/300/200?random=13',
+Image.network('https://picsum.photos/300/200?random=13',
 height: 120.0),
 Padding(padding: EdgeInsets.all(8.0),
 child: Column(crossAxisAlignment: CrossAxisAlignment.start,

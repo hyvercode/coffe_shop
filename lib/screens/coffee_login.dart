@@ -37,7 +37,6 @@ border: OutlineInputBorder(
 obscureText: true),
 SizedBox(height: 32.0),
 ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
-text: 'Login',
 onPressed: () => Navigator.pushNamed(context, '/coffee-catalog-menu'),
 child: Text('Login')),
 SizedBox(height: 16.0),
@@ -46,8 +45,7 @@ children: [
 Text('Don\'t have an account? ',
 style: TextStyle(color: const Color(0xFF050505))),
 GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-register'), child: Text('Sign Up',
-style: TextStyle(color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold),
-onTap: () => Navigator.pushNamed(context, '/coffee-register')))
+style: TextStyle(color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold)))
 ])
 ])),
 );

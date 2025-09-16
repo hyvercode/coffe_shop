@@ -6,24 +6,24 @@ class CoffeeInbox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
 backgroundColor: const Color(0xFFFFFFFF),
-appBar: const AppBar(title: const Text('Inbox'),
+appBar: AppBar(title: const Text('Inbox'),
 backgroundColor: const Color(0xFFFFFFFF),
 elevation: 0),
-body: const ListView(padding: const EdgeInsets.all(0.0),
-children: const [
-const ListTile(title: '20% Off Your Next Order!',
-subtitle: 'Use code COFFEE20'),
-const Divider(),
-const ListTile(title: 'Your Order #1234 is Confirmed',
-subtitle: 'Thank you for your purchase.')
+body: ListView(padding: EdgeInsets.all(0.0),
+children: [
+ListTile(title: const Text('20% Off Your Next Order!'),
+subtitle: const Text('Use code COFFEE20')),
+Divider(),
+ListTile(title: const Text('Your Order #1234 is Confirmed'),
+subtitle: const Text('Thank you for your purchase.'))
 ]),
-bottomNavigationBar: const BottomNavigationBar(currentIndex: 2,
-items: const [const BottomNavigationBarItem(icon: const Icon(Icons.home), label: 'Home'),
-const BottomNavigationBarItem(icon: const Icon(Icons.shopping_cart), label: 'Cart'),
-const BottomNavigationBarItem(icon: const Icon(Icons.email), label: 'Inbox'),
-const BottomNavigationBarItem(icon: const Icon(Icons.person), label: 'Profile')]),
+bottomNavigationBar: BottomNavigationBar(currentIndex: 2,
+items: [BottomNavigationBarItem(icon: const Icon(Icons.home), label: 'Home'),
+BottomNavigationBarItem(icon: const Icon(Icons.shopping_cart), label: 'Cart'),
+BottomNavigationBarItem(icon: const Icon(Icons.email), label: 'Inbox'),
+BottomNavigationBarItem(icon: const Icon(Icons.person), label: 'Profile')]),
 );
   }
 }

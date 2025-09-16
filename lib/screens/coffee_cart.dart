@@ -14,21 +14,18 @@ elevation: 0),
 body: Column(children: [
 Expanded(child: ListView(padding: EdgeInsets.all(8.0),
 children: [
-ListTile(title: 'Cappuccino',
-subtitle: '\$3.50',
-leading: Image('https://picsum.photos/100/100?random=11',
-src: 'https://picsum.photos/100/100?random=11',
+ListTile(title: const Text('Cappuccino'),
+subtitle: const Text('\$3.50'),
+leading: Image.network('https://picsum.photos/100/100?random=11',
 width: 60.0,
 height: 60.0)),
-ListTile(title: 'Espresso',
-subtitle: '\$2.50',
-leading: Image('https://picsum.photos/100/100?random=10',
-src: 'https://picsum.photos/100/100?random=10',
+ListTile(title: const Text('Espresso'),
+subtitle: const Text('\$2.50'),
+leading: Image.network('https://picsum.photos/100/100?random=10',
 width: 60.0,
 height: 60.0))
 ])),
-Card(borderRadius: 0.0,
-padding: EdgeInsets.all(16.0),
+Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0.0)),
 elevation: 8,
 child: Padding(padding: EdgeInsets.all(16.0),
 child: Column(children: [
@@ -41,7 +38,6 @@ style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold))
 ]),
 SizedBox(height: 16.0),
 ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
-text: 'Proceed to Payment',
 onPressed: () => Navigator.pushNamed(context, '/coffee-payment-confirmation'),
 child: Text('Proceed to Payment'))
 ])))

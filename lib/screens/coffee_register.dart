@@ -8,9 +8,9 @@ class CoffeeRegister extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 backgroundColor: const Color(0xFFFFFFFF),
-appBar: AppBar(title: const Text('Create Account'),
+appBar: AppBar(title: const Text(''),
 backgroundColor: const Color(0xFFFFFFFF),
-elevation: 0),
+elevation: -1),
 body: Padding(padding: EdgeInsets.all(24.0),
 child: Column(children: [
 TextField(decoration: InputDecoration(hintText: 'Full Name',
@@ -39,7 +39,6 @@ border: OutlineInputBorder(
 obscureText: true),
 SizedBox(height: 32.0),
 ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
-text: 'Create Account',
 onPressed: () => Navigator.pushNamed(context, '/coffee-catalog-menu'),
 child: Text('Create Account'))
 ])),
