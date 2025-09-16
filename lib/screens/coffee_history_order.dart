@@ -15,17 +15,25 @@ body: ListView(padding: EdgeInsets.all(16.0),
 children: [
 Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
 child: ListTile(title: const Text('Order #1235'),
-subtitle: const Text('July 26, 2024 - \$6.00'))),
+subtitle: const Text('July 26, 2024 - \$6.00'),
+tileColor: const Color(0xFFFFFFF),
+textColor: const Color(0xFF4A2C2A),
+iconColor: const Color(0xFF4A2C2A))),
 SizedBox(height: 12.0),
 Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
 child: ListTile(title: const Text('Order #1234'),
-subtitle: const Text('July 25, 2024 - \$8.50')))
+subtitle: const Text('July 25, 2024 - \$8.50'),
+iconColor: const Color(0xFF4A2C2A),
+textColor: const Color(0xFF4A2C2A),
+tileColor: const Color(0xFFFFFFF)))
 ]),
 bottomNavigationBar: BottomNavigationBar(currentIndex: 3,
 items: [BottomNavigationBarItem(icon: const Icon(Icons.home), label: 'Home'),
 BottomNavigationBarItem(icon: const Icon(Icons.shopping_cart), label: 'Cart'),
 BottomNavigationBarItem(icon: const Icon(Icons.email), label: 'Inbox'),
-BottomNavigationBarItem(icon: const Icon(Icons.person), label: 'Profile')]),
+BottomNavigationBarItem(icon: const Icon(Icons.person), label: 'Profile')],
+backgroundColor: const Color(0xFF4A2C2A),
+selectedItemColor: const Color(0xFFFFFFF)),
 );
   }
 }

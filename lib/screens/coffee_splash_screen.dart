@@ -6,20 +6,24 @@ class CoffeeSplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
 backgroundColor: const Color(0xFF4A2C2A),
-body: const Center(child: const Column(mainAxisAlignment: MainAxisAlignment.center,
+body: Center(child: Column(mainAxisAlignment: MainAxisAlignment.center,
 crossAxisAlignment: CrossAxisAlignment.center,
-children: const [
-const Icon(Icons.free_breakfast,
+children: [
+Icon(Icons.free_breakfast,
 size: 100.0,
 color: const Color(0xFFFFFFFF)),
-const SizedBox(height: 20.0),
-const Text('The Coffee House',
-style: const TextStyle(fontSize: 28.0, color: const Color(0xFFFFFFFF), fontWeight: FontWeight.bold)),
-const Text('Build from HyverStudio',
-style: const TextStyle(fontSize: 12.0, color: const Color(0xFFF2EDED), fontStyle: FontStyle.italic),
-textAlign: TextAlign.center)
+SizedBox(height: 20.0),
+Text('The Coffee House',
+style: TextStyle(fontSize: 28.0, color: const Color(0xFFFFFFFF), fontWeight: FontWeight.bold)),
+SizedBox(height: 10.0),
+Text('Build from HyverStudio',
+style: TextStyle(fontSize: 12.0, color: const Color(0xFFF2EDED), fontStyle: FontStyle.italic),
+textAlign: TextAlign.center),
+Padding(padding: EdgeInsets.all(50.0)),
+GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-login'), child: Text('Les\'t go taste...',
+style: TextStyle(fontSize: 17.0, color: const Color(0xFFFFFFFF), fontStyle: FontStyle.italic, decoration: TextDecoration.none, letterSpacing: 2.0)))
 ])),
 );
   }

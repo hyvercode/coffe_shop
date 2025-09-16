@@ -8,7 +8,7 @@ class CoffeeOrder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 backgroundColor: const Color(0xFFFFFFFF),
-appBar: AppBar(title: const Text('Details'),
+appBar: AppBar(title: const Text(''),
 backgroundColor: const Color(0xFFFFFFFF),
 elevation: 0),
 body: Column(children: [
@@ -29,7 +29,7 @@ style: TextStyle(color: const Color(0xFF6B7280)))
 ]))
 ]))),
 Padding(padding: EdgeInsets.all(16.0),
-child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
+child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), foregroundColor: const Color(0xFFFFFFF), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
 onPressed: () => Navigator.pushNamed(context, '/coffee-cart'),
 child: Text('Add to Cart')))
 ]),

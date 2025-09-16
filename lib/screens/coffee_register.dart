@@ -10,38 +10,10 @@ class CoffeeRegister extends StatelessWidget {
 backgroundColor: const Color(0xFFFFFFFF),
 appBar: AppBar(title: const Text(''),
 backgroundColor: const Color(0xFFFFFFFF),
-elevation: -1),
+elevation: 0),
 body: Padding(padding: EdgeInsets.all(24.0),
-child: Column(children: [
-TextField(decoration: InputDecoration(hintText: 'Full Name',
-filled: true,
-fillColor: const Color(0xFFF3F4F6),
-border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide.none,
-            ))),
-SizedBox(height: 16.0),
-TextField(decoration: InputDecoration(hintText: 'Email Address',
-filled: true,
-fillColor: const Color(0xFFF3F4F6),
-border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide.none,
-            ))),
-SizedBox(height: 16.0),
-TextField(decoration: InputDecoration(hintText: 'Password',
-filled: true,
-fillColor: const Color(0xFFF3F4F6),
-border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide.none,
-            )),
-obscureText: true),
-SizedBox(height: 32.0),
-ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
-onPressed: () => Navigator.pushNamed(context, '/coffee-catalog-menu'),
-child: Text('Create Account'))
-])),
+child: Text('Register',
+style: TextStyle(fontSize: 32.0, color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold))),
 );
   }
 }

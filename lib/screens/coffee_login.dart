@@ -9,7 +9,7 @@ class CoffeeLogin extends StatelessWidget {
     return Scaffold(
 backgroundColor: const Color(0xFFFFFFFF),
 appBar: AppBar(backgroundColor: const Color(0xFFFFFFFF),
-elevation: -1),
+elevation: 0),
 body: Padding(padding: EdgeInsets.all(24.0),
 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
 mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +36,7 @@ border: OutlineInputBorder(
             )),
 obscureText: true),
 SizedBox(height: 32.0),
-ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
+ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), foregroundColor: const Color(0xFFFFFFFF), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
 onPressed: () => Navigator.pushNamed(context, '/coffee-catalog-menu'),
 child: Text('Login')),
 SizedBox(height: 16.0),

@@ -21,7 +21,7 @@ SizedBox(height: 16.0),
 Text('Your order is being prepared.',
 style: TextStyle(color: const Color(0xFF6B7280))),
 SizedBox(height: 32.0),
-ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
+ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), foregroundColor: const Color(0xFFFFFFF), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
 onPressed: () => Navigator.pushNamed(context, '/coffee-catalog-menu'),
 child: Text('Back to Menu'))
 ])),
