@@ -1,136 +1,249 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-
-class CoffeeCatalogMenu extends StatelessWidget {
-  const CoffeeCatalogMenu({super.key});
+class CoffeeCatalogMenuScreen extends StatelessWidget {
+  const CoffeeCatalogMenuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-backgroundColor: const Color(0xFFFFFFFF),
-appBar: AppBar(title: const Text(''),
-backgroundColor: const Color(0xFFFFFFFF),
-elevation: 0),
-body: ListView(padding: EdgeInsets.all(10.0),
-scrollDirection: Axis.vertical,
-children: [
-Column(crossAxisAlignment: CrossAxisAlignment.start,
-mainAxisAlignment: MainAxisAlignment.center,
-children: [
-Text('Popular Brews',
-style: TextStyle(fontSize: 32.0, color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold)),
-SizedBox(height: 16.0),
-Wrap(spacing: 16.0,
-runSpacing: 16.0,
-direction: Axis.horizontal,
-children: [
-Column(mainAxisAlignment: MainAxisAlignment.center,
-crossAxisAlignment: CrossAxisAlignment.center,
-children: [
-Row(children: [
-GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-child: Column(children: [
-Image.network('https://picsum.photos/300/200?random=11',
-height: 120.0),
-Padding(padding: EdgeInsets.all(8.0),
-child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-children: [
-Text('Cappuccino',
-style: TextStyle(color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold)),
-Text('\$3.50',
-style: TextStyle(color: const Color(0xFF050505)))
-]))
-]))),
-GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-child: Column(children: [
-Image.network('https://picsum.photos/300/200?random=10',
-height: 120.0),
-Padding(padding: EdgeInsets.all(8.0),
-child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-children: [
-Text('Espresso',
-style: TextStyle(color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold)),
-Text('\$2.50',
-style: TextStyle(color: const Color(0xFF050505)))
-]))
-])))
-])
-]),
-Column(mainAxisAlignment: MainAxisAlignment.center,
-crossAxisAlignment: CrossAxisAlignment.center,
-children: [
-Row(children: [
-GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-child: Column(children: [
-Image.network('https://picsum.photos/300/200?random=13',
-height: 120.0),
-Padding(padding: EdgeInsets.all(8.0),
-child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-children: [
-Text('Americano',
-style: TextStyle(color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold)),
-Text('\$3.00',
-style: TextStyle(color: const Color(0xFF050505)))
-]))
-]))),
-GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-child: Column(children: [
-Image.network('https://picsum.photos/300/200?random=12',
-height: 120.0),
-Padding(padding: EdgeInsets.all(8.0),
-child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-children: [
-Text('Latte',
-style: TextStyle(color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold)),
-Text('\$4.00',
-style: TextStyle(color: const Color(0xFF050505)))
-]))
-])))
-])
-]),
-Column(mainAxisAlignment: MainAxisAlignment.center,
-crossAxisAlignment: CrossAxisAlignment.center,
-children: [
-Row(children: [
-GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-child: Column(children: [
-Image.network('https://picsum.photos/300/200?random=13',
-height: 120.0),
-Padding(padding: EdgeInsets.all(8.0),
-child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-children: [
-Text('Americano',
-style: TextStyle(color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold)),
-Text('\$3.00',
-style: TextStyle(color: const Color(0xFF050505)))
-]))
-]))),
-GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-order'), child: Card(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-child: Column(children: [
-Image.network('https://picsum.photos/300/200?random=12',
-height: 120.0),
-Padding(padding: EdgeInsets.all(8.0),
-child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-children: [
-Text('Latte',
-style: TextStyle(color: const Color(0xFF4A2C2A), fontWeight: FontWeight.bold)),
-Text('\$4.00',
-style: TextStyle(color: const Color(0xFF050505)))
-]))
-])))
-])
-])
-])
-])
-]),
-bottomNavigationBar: BottomNavigationBar(currentIndex: 0,
-items: [BottomNavigationBarItem(icon: const Icon(Icons.home), label: 'Home'),
-BottomNavigationBarItem(icon: const Icon(Icons.shopping_cart), label: 'Cart'),
-BottomNavigationBarItem(icon: const Icon(Icons.email), label: 'Inbox'),
-BottomNavigationBarItem(icon: const Icon(Icons.person), label: 'Profile')],
-backgroundColor: const Color(0xFF4A2C2A),
-selectedItemColor: const Color(0xFFFFFFFF),
-unselectedItemColor: const Color(0xFF6B7280)),
-);
+    return const Scaffold(
+    appBar: const AppBar(
+      backgroundColor: Color(0xFFFFFFFF),
+      elevation: 0,
+      foregroundColor: Color(0xFF6B7280),
+      title: Text('Menus'),
+    ),
+    body: ListView(
+      padding: EdgeInsets.all(10),
+      scrollDirection: ScrollDirection.vertical,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+        const Text('Popular Brews', 
+          data: 'Popular Brews',
+          fontSize: 32,
+          fontWeight: FontWeight.bold,
+          color: Color(0xFF4A2C2A),
+        ),
+        const SizedBox(
+          height: 16,
+        ),
+        Wrap(
+          spacing: 16,
+          runSpacing: 16,
+          direction: 'horizontal',
+          children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            child: Row(
+              children: [
+              Card(
+                borderRadius: 12,
+                onTap: () => Navigator.pushNamed(context, '/coffee-order'),
+                child: const Column(
+                  children: [
+                  const Image(
+                    src: NetworkImage('https://picsum.photos/300/200?random=11'),
+                    height: 120,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      const Text('Cappuccino', 
+                        data: 'Cappuccino',
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF4A2C2A),
+                      ),
+                      const Text('$3.50', 
+                        data: '$3.50',
+                        color: Color(0xFF050505),
+                      ),
+                    ],
+                    ),
+                  ),
+                ],
+                ),
+              ),
+              Card(
+                borderRadius: 12,
+                onTap: () => Navigator.pushNamed(context, '/coffee-order'),
+                child: const Column(
+                  children: [
+                  const Image(
+                    src: NetworkImage('https://picsum.photos/300/200?random=10'),
+                    height: 120,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      const Text('Espresso', 
+                        data: 'Espresso',
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF4A2C2A),
+                      ),
+                      const Text('$2.50', 
+                        data: '$2.50',
+                        color: Color(0xFF050505),
+                      ),
+                    ],
+                    ),
+                  ),
+                ],
+                ),
+              ),
+            ],
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            child: Row(
+              children: [
+              Card(
+                borderRadius: 12,
+                onTap: () => Navigator.pushNamed(context, '/coffee-order'),
+                child: const Column(
+                  children: [
+                  const Image(
+                    src: NetworkImage('https://picsum.photos/300/200?random=13'),
+                    height: 120,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      const Text('Americano', 
+                        data: 'Americano',
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF4A2C2A),
+                      ),
+                      const Text('$3.00', 
+                        data: '$3.00',
+                        color: Color(0xFF050505),
+                      ),
+                    ],
+                    ),
+                  ),
+                ],
+                ),
+              ),
+              Card(
+                borderRadius: 12,
+                onTap: () => Navigator.pushNamed(context, '/coffee-order'),
+                child: const Column(
+                  children: [
+                  const Image(
+                    src: NetworkImage('https://picsum.photos/300/200?random=12'),
+                    height: 120,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      const Text('Latte', 
+                        data: 'Latte',
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF4A2C2A),
+                      ),
+                      const Text('$4.00', 
+                        data: '$4.00',
+                        color: Color(0xFF050505),
+                      ),
+                    ],
+                    ),
+                  ),
+                ],
+                ),
+              ),
+            ],
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            child: Row(
+              children: [
+              Card(
+                borderRadius: 12,
+                onTap: () => Navigator.pushNamed(context, '/coffee-order'),
+                child: const Column(
+                  children: [
+                  const Image(
+                    src: NetworkImage('https://picsum.photos/300/200?random=13'),
+                    height: 120,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      const Text('Americano', 
+                        data: 'Americano',
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF4A2C2A),
+                      ),
+                      const Text('$3.00', 
+                        data: '$3.00',
+                        color: Color(0xFF050505),
+                      ),
+                    ],
+                    ),
+                  ),
+                ],
+                ),
+              ),
+              Card(
+                borderRadius: 12,
+                onTap: () => Navigator.pushNamed(context, '/coffee-order'),
+                child: const Column(
+                  children: [
+                  const Image(
+                    src: NetworkImage('https://picsum.photos/300/200?random=12'),
+                    height: 120,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      const Text('Latte', 
+                        data: 'Latte',
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF4A2C2A),
+                      ),
+                      const Text('$4.00', 
+                        data: '$4.00',
+                        color: Color(0xFF050505),
+                      ),
+                    ],
+                    ),
+                  ),
+                ],
+                ),
+              ),
+            ],
+            ),
+          ),
+        ],
+        ),
+      ],
+      ),
+    ),
+    bottomNavigationBar: const BottomNavigationBar(
+      currentIndex: 0,
+      backgroundColor: Color(0xFF4A2C2A),
+      selectedItemColor: Color(0xFFFFFFFF),
+      unselectedItemColor: Color(0xFF6B7280),
+    ),
+    backgroundColor: Color(0xFFFFFFFF),
+  );
   }
 }

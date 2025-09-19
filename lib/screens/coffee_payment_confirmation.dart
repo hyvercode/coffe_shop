@@ -1,65 +1,117 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-
-class CoffeePaymentConfirmation extends StatelessWidget {
-  const CoffeePaymentConfirmation({super.key});
+class CoffeePaymentConfirmationScreen extends StatelessWidget {
+  const CoffeePaymentConfirmationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-backgroundColor: const Color(0xFFFFFFFF),
-appBar: AppBar(title: const Text('Checkout'),
-backgroundColor: const Color(0xFFFFFFFF),
-elevation: 0,
-foregroundColor: const Color(0xFF6B7280)),
-body: Padding(padding: EdgeInsets.all(16.0),
-child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-children: [
-Text('Order Summary',
-style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
-Card(margin: EdgeInsets.all(8.0),
-shadowColor: const Color(0xFF6B7280),
-color: const Color(0xFFFFFFF),
-child: Padding(padding: EdgeInsets.all(16.0),
-child: Column(children: [
-Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-children: [
-Text('Cappuccino (1)',
-style: TextStyle(color: const Color(0xFF6B7280))),
-Text('\$3.50',
-style: TextStyle(color: const Color(0xFF6B7280)))
-]),
-Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-children: [
-Text('Espresso (1)',
-style: TextStyle(color: const Color(0xFF6B7280))),
-Text('\$2.50')
-]),
-Divider(),
-Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-children: [
-Text('Total',
-style: TextStyle(color: const Color(0xFF6B7280), fontWeight: FontWeight.bold)),
-Text('\$6.00',
-style: TextStyle(color: const Color(0xFF6B7280), fontWeight: FontWeight.bold))
-])
-]))),
-SizedBox(height: 24.0),
-Text('Payment Method',
-style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
-Card(margin: EdgeInsets.all(8.0),
-color: const Color(0xFFFFFFF),
-child: ListTile(title: const Text('Visa **** 1234'),
-tileColor: const Color(0xFFFFFFF),
-textColor: const Color(0xFF6B7280),
-iconColor: const Color(0xFF6B7280),
-leading: Icon(Icons.credit_card,
-color: const Color(0xFF6B7280)))),
-SizedBox(height: 32.0),
-ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF4A2C2A), foregroundColor: const Color(0xFFFFFFF), fixedSize: const Size(double.infinity, 52), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
-onPressed: () => Navigator.pushNamed(context, '/coffee-success'),
-child: Text('Confirm Order'))
-])),
-);
+    return const Scaffold(
+    appBar: const AppBar(
+      backgroundColor: Color(0xFFFFFFFF),
+      elevation: 0,
+      foregroundColor: Color(0xFF6B7280),
+      title: Text('Checkout'),
+    ),
+    body: Padding(
+      padding: EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+        const Text('Order Summary', 
+          data: 'Order Summary',
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+        const Card(
+          padding: EdgeInsets.all(16),
+          margin: EdgeInsets.all(8),
+          shadowColor: Color(0xFF6B7280),
+          color: null,
+          child: const Column(
+            children: [
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              const Text('Cappuccino (1)', 
+                data: 'Cappuccino (1)',
+                color: Color(0xFF6B7280),
+              ),
+              const Text('$3.50', 
+                data: '$3.50',
+                color: Color(0xFF6B7280),
+              ),
+            ],
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              const Text('Espresso (1)', 
+                data: 'Espresso (1)',
+                color: Color(0xFF6B7280),
+              ),
+              const Text('$2.50', 
+                data: '$2.50',
+              ),
+            ],
+            ),
+            const Divider(),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              const Text('Total', 
+                data: 'Total',
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF6B7280),
+              ),
+              const Text('$6.00', 
+                data: '$6.00',
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF6B7280),
+              ),
+            ],
+            ),
+          ],
+          ),
+        ),
+        const SizedBox(
+          height: 24,
+        ),
+        const Text('Payment Method', 
+          data: 'Payment Method',
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+        const Card(
+          margin: EdgeInsets.all(8),
+          color: null,
+          shadowColor: null,
+          child: const ListTile(
+            title: 'Visa **** 1234',
+            tileColor: null,
+            textColor: Color(0xFF6B7280),
+            iconColor: Color(0xFF6B7280),
+            child: const Icon(Icons.credit_card, 
+              icon: 'credit_card',
+              color: Color(0xFF6B7280),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 32,
+        ),
+        ElevatedButton(
+          height: 52,
+          borderRadius: 12,
+          backgroundColor: Color(0xFF4A2C2A),
+          onPressed: () => Navigator.pushNamed(context, '/coffee-success'),
+          foregroundColor: null,
+          child: Text('Confirm Order'),
+        ),
+      ],
+      ),
+    ),
+    backgroundColor: Color(0xFFFFFFFF),
+  );
   }
 }

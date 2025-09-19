@@ -1,0 +1,6 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Additional rules can be added here. For a list of available rules, see:
+    # https://dart-lang.github.io/linter/lints/index.html

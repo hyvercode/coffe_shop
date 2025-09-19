@@ -1,0 +1,5 @@
+# This file is used by the Flutter tool to assess project health.
+project_type: app
+
+version:
+  flutter: 3.22.2

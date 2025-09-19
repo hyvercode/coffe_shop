@@ -1,30 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-
-class CoffeeSplashScreen extends StatelessWidget {
-  const CoffeeSplashScreen({super.key});
+class CoffeeSplashScreenScreen extends StatelessWidget {
+  const CoffeeSplashScreenScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-backgroundColor: const Color(0xFF4A2C2A),
-body: Center(child: Column(mainAxisAlignment: MainAxisAlignment.center,
-crossAxisAlignment: CrossAxisAlignment.center,
-children: [
-Icon(Icons.free_breakfast,
-size: 100.0,
-color: const Color(0xFFFFFFFF)),
-SizedBox(height: 20.0),
-Text('The Coffee House',
-style: TextStyle(fontSize: 28.0, color: const Color(0xFFFFFFFF), fontWeight: FontWeight.bold)),
-SizedBox(height: 10.0),
-Text('Build from HyverStudio',
-style: TextStyle(fontSize: 12.0, color: const Color(0xFFF2EDED), fontStyle: FontStyle.italic),
-textAlign: TextAlign.center),
-Padding(padding: EdgeInsets.all(50.0)),
-GestureDetector(onTap: () => Navigator.pushNamed(context, '/coffee-login'), child: Text('Les\'t go taste...',
-style: TextStyle(fontSize: 17.0, color: const Color(0xFFFFFFFF), fontStyle: FontStyle.italic, decoration: TextDecoration.none, letterSpacing: 2.0)))
-])),
-);
+    return const Scaffold(
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        const Icon(Icons.free_breakfast, 
+          icon: 'free_breakfast',
+          size: 100,
+          color: Color(0xFFFFFFFF),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        const Text('The Coffee House', 
+          data: 'The Coffee House',
+          fontSize: 28,
+          fontWeight: FontWeight.bold,
+          color: Color(0xFFFFFFFF),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        const Text('Build from HyverStudio', 
+          data: 'Build from HyverStudio',
+          fontSize: 12,
+          color: Color(0xFFF2EDED),
+          textAlign: TextAlign.center,
+          fontStyle: FontStyle.italic,
+        ),
+        const Padding(
+          padding: EdgeInsets.all(50),
+        ),
+        Text('Les\'t go taste...', 
+          data: 'Les\'t go taste...',
+          fontSize: 17,
+          onTap: () => Navigator.pushNamed(context, '/coffee-login'),
+          color: Color(0xFFFFFFFF),
+          fontStyle: FontStyle.italic,
+          letterSpacing: 2,
+          textDecoration: TextDecoration.none,
+        ),
+      ],
+      ),
+    ),
+    backgroundColor: Color(0xFF4A2C2A),
+  );
   }
 }
